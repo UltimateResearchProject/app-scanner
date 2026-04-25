@@ -6,7 +6,7 @@ rules:
   languages: [python]
 
 - id: password-logged
-  pattern: logger.info(...password...)
+  pattern-regex: logger\.info\(.*password.*\)
   message: Password must never be logged
   severity: ERROR
   languages: [python]
