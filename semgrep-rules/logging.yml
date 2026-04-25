@@ -1,0 +1,12 @@
+rules:
+- id: auth-log-unstructured
+  pattern: logger.info("login success")
+  message: Use structured auth logging wrapper
+  severity: ERROR
+  languages: [python]
+
+- id: password-logged
+  pattern: logger.info(...password...)
+  message: Password must never be logged
+  severity: ERROR
+  languages: [python]
